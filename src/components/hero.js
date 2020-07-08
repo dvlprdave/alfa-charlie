@@ -1,24 +1,43 @@
 import React from 'react'
-import styled from 'styled-components';
-// import {motion} from 'framer-motion'
+import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 import heroImg from '../images/hero-img.jpg'
 
-const Hero = () => (
-  <Wrapper>
-    <Intro>
-      <h3>We build purposeful brands for a sustainable future.</h3>
-      <p>Anchored in simplicity, we develop strategic design and creative branding for businesses that want to do better and be better.</p>
-      <ViewMore href="">
-        <span>View our work</span>
-      </ViewMore>
-    </Intro>
+const Hero = () => {
+  const variants = {
+    visible: { x: 0, opacity: 1 },
+    hidden: { x: 50, opacity: 0 },
+  }
 
-    <HeroImage>
-      <img src={heroImg} alt=""/>
-    </HeroImage>
-  </Wrapper>
-)
+  return (
+    <Wrapper>
+      <Intro
+        initial='hidden'
+        animate='visible'
+        transition={{ delay: 0.8 }}
+        variants={variants}
+      >
+        <h3>We build purposeful brands for a sustainable future.</h3>
+        <p>
+          Anchored in simplicity, we develop strategic design and creative
+          branding for businesses that want to do better and be better.
+        </p>
+        <ViewMore href=''>
+          <span>View our work</span>
+        </ViewMore>
+      </Intro>
+
+      <HeroImage
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+      >
+        <img src={heroImg} alt='' />
+        </HeroImage>
+    </Wrapper>
+  )
+}
 
 export default Hero
 
@@ -31,45 +50,58 @@ const Wrapper = styled.section`
   height: 100vh;
   padding-top: 3%;
   margin-bottom: 3rem;
-`;
+`
 
-const Intro = styled.div`
+const Intro = styled(motion.div)`
   margin-top: 10vh;
   flex: 0 0 30%;
   z-index: 10;
 
   p {
     max-width: 70%;
-    color: ${props => props.theme.colors.lightGrey};
+    color: ${(props) => props.theme.colors.lightGrey};
     font-size: 20px;
   }
 
-  @media screen and (min-width: 1925px) {
+  @media screen and (max-width: 551px) {
     h3 {
-      font-size: 1.9vw;
+      font-size: 1.9rem;
+    }
+
+    p {
+      max-width: 95%;
+      font-size: 1rem;
     }
   }
-`;
+
+  @media screen and (max-width: 1600px) {
+    flex: 0 0 40%;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex: 1;
+  }
+`
 
 const ViewMore = styled.a`
   text-transform: uppercase;
-  font-size: .88rem;
-  letter-spacing: .16em;
+  font-size: 0.88rem;
+  letter-spacing: 0.16em;
   padding: 16px 0 16px 0;
   white-space: nowrap;
-  color: ${props => props.theme.colors.redLink};
+  color: ${(props) => props.theme.colors.redLink};
 
   ::before {
-    content: "";
+    content: '';
     display: inline-block;
-    border-top: .1rem solid ${props => props.theme.colors.redLink};;
+    border-top: 0.1rem solid ${(props) => props.theme.colors.redLink};
     width: 2rem;
     margin-right: 1rem;
     height: 4px;
   }
-`;
+`
 
-const HeroImage = styled.div`
+const HeroImage = styled(motion.div)`
   height: 70vh;
   width: 65%;
   margin-left: -6.84%;
@@ -79,4 +111,12 @@ const HeroImage = styled.div`
     width: 100%;
     height: 100%;
   }
-`;
+
+  @media screen and (max-width: 1600px) {
+    margin-left: -16%;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`

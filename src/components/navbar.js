@@ -23,14 +23,17 @@ const Navbar = () => (
 
 export default Navbar
 
-const Nav = styled.nav``
+const Nav = styled.nav`
+  ul {
+    margin: 0;
+  }
+`
 
 const Hamburger = styled.div`
   position: absolute;
-  top: 30px;
-  right: calc(60px + 2rem);
-
-  margin: 1em;
+  top: calc(1.2rem + 20px);
+  right: calc(120px - 2rem);
+  /* right: 120px; */
   width: 20px;
 
   ::after, ::before {
@@ -54,4 +57,8 @@ const Instagram = styled.a`
   letter-spacing: 0.6em;
   transform: rotate(90deg);
   color: ${props => props.theme.colors.lightGrey};
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `
