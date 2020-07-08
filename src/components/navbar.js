@@ -45,13 +45,13 @@ const Hamburger = styled.div`
 
 const Instagram = styled.a`
   position: absolute;
-  top: 500px;
-  right: 60px;
+  top: 700px;
+  right: 44px;
 
-  font-size: 0.7rem;
+  font-size: .9rem;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.6em;
-  /* height: calc(100vh - 200px); */
   transform: rotate(90deg);
+  color: ${props => props.theme.colors.lightGrey};
 `

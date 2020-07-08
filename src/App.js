@@ -6,6 +6,7 @@ import { ThemeProvider } from 'styled-components'
 import Theme from './theme/theme'
 import Header from './components/header'
 import Navbar from './components/navbar'
+import Hero from './components/hero'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <AppContainer>
         <Header />
         <Navbar />
+        <Hero />
       </AppContainer>
     </ThemeProvider>
   )
@@ -25,7 +27,7 @@ const AppContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${props => props.theme.colors.bgGrey};
+  background-color: ${props => props.theme.colors.mainBg};
   height: 100vh;
   padding: 0 10.5%;
 `

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Header = () => (
   <>
     <Logo>alfa charlie</Logo>
-    <Title>San Diego Branding Studio</Title>
+    <Heading>San Diego Branding Studio</Heading>
   </>
 )
 
@@ -21,13 +21,14 @@ const Logo = styled.p`
   margin: 0;
 `
 
-const Title = styled.p`
+const Heading = styled.p`
   position: absolute;
   top: 45px;
   left: 46.75%;
 
-  font-size: 0.65rem;
+  font-size: .65em;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.6em;
+  color: ${props => props.theme.colors.lightGrey};
 `
