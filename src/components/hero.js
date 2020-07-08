@@ -7,7 +7,7 @@ import heroImg from '../images/hero-img.jpg'
 const Hero = () => {
   const variants = {
     visible: { x: 0, opacity: 1 },
-    hidden: { x: 50, opacity: 0 },
+    hidden: { x: 100, opacity: 0 },
   }
 
   return (
@@ -29,8 +29,8 @@ const Hero = () => {
       </Intro>
 
       <HeroImage
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: 1 }}
+        initial={{ opacity: 0, x: 200 }}
+        animate={{ opacity: 1, x: 0}}
         transition={{ duration: 1.5 }}
       >
         <img src={heroImg} alt='' />
