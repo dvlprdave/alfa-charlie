@@ -2,15 +2,32 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Header = () => (
-  <Intro>
-    <h1>CRA Styled-Components</h1>
-    <h4>Enjoy and build passionately!</h4>
-  </Intro>
+  <>
+    <Logo>alfa charlie</Logo>
+    <Title>San Diego Branding Studio</Title>
+  </>
 )
 
 export default Header
 
-const Intro = styled.div`
-  text-align: center;
-  font-size: 2vw;
+const Logo = styled.p`
+  position: absolute;
+  top: 30px;
+  left: 75px;
+
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin: 0;
+`
+
+const Title = styled.p`
+  position: absolute;
+  top: 45px;
+  left: 46.75%;
+
+  font-size: 0.65rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.6em;
 `

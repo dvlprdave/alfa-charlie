@@ -1,14 +1,9 @@
-// You can store all of your styles here to be used within the theme object and pass them as props to your CSS declarations
-
-/* 
-  Example:
-    const ExampleDiv = styled.div`
-      colors: ${props => props.theme.colors.white};   
-    `
-*/
-
 export default {
   colors: {
+    mainBg: '#EFECEA',
+    bgGrey: '#E2DED9',
+    transitionGrey: '#3A3C49',
+    redLink: '#D43246',
     white: '#ffff'
   }
 }

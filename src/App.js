@@ -5,12 +5,14 @@ import { ThemeProvider } from 'styled-components'
 
 import Theme from './theme/theme'
 import Header from './components/header'
+import Navbar from './components/navbar'
 
 function App() {
   return (
     <ThemeProvider theme={Theme}>
       <AppContainer>
         <Header />
+        <Navbar />
       </AppContainer>
     </ThemeProvider>
   )
@@ -18,13 +20,12 @@ function App() {
 
 export default App
 
-// AppContainer styles. Centers <Header /> component
 const AppContainer = styled.div`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  background-color: ${props => props.theme.colors.bgGrey};
   height: 100vh;
-  background: #1d1f27;
-  color: ${props => props.theme.colors.white};;
+  padding: 0 10.5%;
 `
