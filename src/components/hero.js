@@ -15,7 +15,7 @@ const Hero = () => {
       <Intro
         initial='hidden'
         animate='visible'
-        transition={{ delay: 0.8 }}
+        transition={{ delay: 0.9, duration: 1.2 }}
         variants={variants}
       >
         <h3>We build purposeful brands for a sustainable future.</h3>
@@ -49,7 +49,7 @@ const Wrapper = styled.section`
   position: relative;
   height: 100vh;
   padding-top: 3%;
-  margin-bottom: 3rem;
+  margin-bottom: 8rem;
 `
 
 const Intro = styled(motion.div)`

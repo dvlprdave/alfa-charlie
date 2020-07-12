@@ -6,6 +6,7 @@ import { ThemeProvider } from 'styled-components'
 import Theme from './theme/theme'
 import Header from './components/header'
 import Hero from './components/hero'
+import InfoSection from './components/infoSection'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <AppContainer>
         <Header />
         <Hero />
+        <InfoSection />
       </AppContainer>
     </ThemeProvider>
   )
