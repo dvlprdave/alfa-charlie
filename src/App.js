@@ -25,7 +25,7 @@ export default App
 const AppContainer = styled.div`
   position: relative;
   background-color: ${props => props.theme.colors.mainBg};
-  height: 100vh;
+  height: 100%;
   padding: 0 10.5%;
 
   @media screen and (max-width: 480px) {
