@@ -85,7 +85,7 @@ const Intro = styled(motion.div)`
 
 const ViewMore = styled.a`
   text-transform: uppercase;
-  font-size: 0.88rem;
+  font-size: 0.78rem;
   letter-spacing: 0.16em;
   padding: 16px 0 16px 0;
   white-space: nowrap;

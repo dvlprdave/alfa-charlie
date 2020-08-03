@@ -28,7 +28,8 @@ const InfoSection = () => (
 )
 
 const MainWrapper = styled.div`
-  padding: 0 12%;
+  padding: 0 10.5%;
+  padding-bottom: 10rem;
 
   @media screen and (max-width: 768px) {
     padding: 0;
@@ -47,7 +48,7 @@ const SectionHeading = styled.div`
 
   h2 {
     position: relative;
-    font-size: 7.2rem;
+    font-size: 6.4rem;
     text-align: center;
     text-transform: lowercase;
     color: ${(props) => props.theme.colors.white};
@@ -111,8 +112,10 @@ const SectionInfo = styled.div`
   }
 
   h3 {
-    max-width: 75%;
+    font-size: 2.4rem;
+    max-width: 80%;
     line-height: 1.1em;
+    margin-top: 0;
     margin-bottom: 1.76rem;
 
     @media screen and (max-width: 1366px) {
@@ -126,7 +129,6 @@ const SectionInfo = styled.div`
   }
 
   p {
-    max-width: 85%;
     margin-bottom: 2.35rem;
 
     @media screen and (max-width: 480px) {

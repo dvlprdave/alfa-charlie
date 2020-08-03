@@ -28,6 +28,7 @@ const AppContainer = styled.div`
   height: 100%;
   padding: 0 10.5%;
 
+
   @media screen and (max-width: 480px) {
     padding: 0 2rem;
   }

@@ -8,9 +8,8 @@ body {
     sans-serif, 'Playfair Display', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 17px;
+  font-size: 20px;
 }
-
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -50,3 +49,29 @@ img {
   width: 100%;
   height: auto;
 }
+
+/* Font Sizes */
+
+@media screen and (min-width:2560px) {
+  html {
+   font-size:20px;
+  }
+ }
+
+ @media screen and (max-width:1600px) {
+  html {
+   font-size:15px;
+  }
+ }
+
+ @media screen and (max-width:1366px) {
+  html {
+   font-size:14px;
+  }
+ }
+ 
+ @media screen and (max-width:1024px) {
+  html {
+   font-size:15px
+  }
+ }
